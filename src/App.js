@@ -3,8 +3,8 @@ import Home from './pages/Home';
 import './App.css';
 import About from './pages/About';
 import Context from './pages/Context';
-import { UserProvider } from './modules/user/userProvider';
-
+import { MyProvider } from './modules/user/userContext';
+  
 function App() {
   return (
     <div>
@@ -19,9 +19,9 @@ function App() {
         <Route
           path="/context"
           element={
-            <UserProvider>
+            <MyProvider>
               <Context />
-            </UserProvider>
+            </MyProvider>
           }
         />
         <Route path="/about" element={<About />} />
